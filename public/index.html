@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-display.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,7 +37,7 @@
       </div>
     </nav>
 
-    <header>
+    <header class="profile-picture">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -59,6 +60,30 @@
           </div>
         </form>
       </section>
+      <section>
+        <article class="tweet-container">
+          <header class="tweet">
+            <div class="top-row-tweet-container">
+              <div>
+                <i class="fa-solid fa-user"></i>
+                <p>Newton</p>
+              </div>
+              <p class="user-handle">@SirIsaac</p>
+            </div>
+          </header>
+          <p class="tweet-content">It sure is a beautiful day!</p>
+          <footer>
+            <p class="date-of-tweet">10 days ago</p>
+            <div class="icons">
+              <i class="flag fa-solid fa-flag"></i>
+              <i class="retweet fa-solid fa-retweet"></i>
+              <i class="heart fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
     </main>
   </body>
 </html>
+
+
