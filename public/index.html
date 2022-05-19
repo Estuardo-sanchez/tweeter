@@ -51,7 +51,7 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form class="tweet-form" method="POST" action="/tweets/">
+        <form class="tweet-form" method="POST" action="/tweets">
           <label class="tweet-post" for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="tweet-btn-ctr bungee">
@@ -61,26 +61,7 @@
         </form>
       </section>
       <section>
-        <article class="tweet-container">
-          <header class="tweet">
-            <div class="top-row-tweet-container">
-              <div>
-                <i class="fa-solid fa-user"></i>
-                <p>Newton</p>
-              </div>
-              <p class="user-handle">@SirIsaac</p>
-            </div>
-          </header>
-          <p class="tweet-content">It sure is a beautiful day!</p>
-          <footer>
-            <p class="date-of-tweet">10 days ago</p>
-            <div class="icons">
-              <i class="flag fa-solid fa-flag"></i>
-              <i class="retweet fa-solid fa-retweet"></i>
-              <i class="heart fa-solid fa-heart"></i>
-            </div>
-          </footer>
-        </article>
+        <article class="tweet-container"></article>
       </section>
     </main>
   </body>
