@@ -58,7 +58,15 @@ for (const tweet of tweets) {
 }
 };
 
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweet) {
+  const safeHTML = `<p>${escape(tweet.content.text)}</p>`;
 let $tweet = `<article class="tweet-container">
 <header class="tweet">
   <div class="top-row-tweet-container">
@@ -69,7 +77,7 @@ let $tweet = `<article class="tweet-container">
     <p class="user-handle">${tweet.user.handle}</p>
   </div>
 </header>
-<p class="tweet-content">${tweet.content.text}</p>
+${safeHTML}
 <footer>
   <p class="date-of-tweet">${timeago.format(tweet.created_at)}</p>
   <div class="icons">
