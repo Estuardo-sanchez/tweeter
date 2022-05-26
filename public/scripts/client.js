@@ -9,6 +9,18 @@ $(document).ready(function () {
     event.preventDefault()
     const form = $(this)
     const text = form.serialize();
+
+
+    $('.alert').slideUp();
+    if (text.length <= 5) {
+      $('.alert').slideDown(1000).text("You can't post an empty tweet. Say what's on your mind!")
+      return;
+    }
+    if (text.length > 145) {
+      $('.alert').slideDown(1000).text("you exceeded the character amount. Pease keep it under 140 characters.")
+      return;
+    }
+
     $.ajax({
       method: 'POST',
       url: '/tweets',
@@ -16,7 +28,11 @@ $(document).ready(function () {
     })
       .then((res) => {
         const tweetVal = createTweetElement(res);
-  $('.tweet-main-container').prepend(tweetVal)
+        const counter = "#tweet-text + div output";
+        $('.tweet-main-container').prepend(tweetVal)
+        $("#tweet-text").val(""); 
+        $(counter).text("140");
+    
       })
   })
 
