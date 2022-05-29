@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('#tweet-text').keyup(function() {
     const maxChar = 140;
-    const typedChars = $(this).val()
+    const typedChars = $(this).val();
     const charsLeft = maxChar - typedChars.length;
     $('.counter').text(charsLeft);
     if (charsLeft < 0) {
